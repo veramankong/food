@@ -14,14 +14,25 @@ $f3 = Base::instance();
 //define a default route
 $f3->route('GET /', function() {
 
-    //view render
+    //Display home view
     $view = new Template();
     echo $view->render('views/home.html');
 });
 
 //Define a breakfast route
 $f3->route('GET /breakfast', function() {
-    echo "<h1>Breakfast Page</h1>";
+
+    //Display breakfast view
+    $view = new Template();
+    echo $view->render('views/breakfast.html');
+});
+
+//Define a lunch route
+$f3->route('GET /lunch', function() {
+
+    //Display lunch view
+    $view = new Template();
+    echo $view->render('views/lunch.html');
 });
 
 //Run fat free
